@@ -102,7 +102,9 @@ function calcTaxRate() {
   var subtotal = document.getElementById("input-subtotal").value;
   var tax = document.getElementById("input-tax").value;
   var rate = tax/subtotal;
-  taxRate = rate;
+  if (rate > 0) {
+    taxRate = rate;
+  }
   console.log("rate: " + rate);
 }
 
